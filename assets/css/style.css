@@ -1,0 +1,163 @@
+body{background-color: rgb(167, 167, 167);}
+p{
+    color: rgb(184, 184, 184);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    font-style: italic;
+}
+li{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-style: oblique;
+}
+button{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+}
+a{
+    color: white;
+}
+button:hover{
+    background-color: purple;
+
+}
+a:hover{
+    color: yellow;
+}
+.curriculo {
+    display: block;
+    justify-self: center;
+    width: 500px;
+    border: 2px solid black;
+    border-bottom: 2px black;
+    border-bottom: black 10px;
+    background-color: white;
+}
+.ulcurriculo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.img{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+td{
+    background-color: white;
+    border: 2px;
+    border-color: black 2px;
+}
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative; /* Needed for pseudo-elements */
+  overflow: hidden; /* Ensures glow stays within card boundaries */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+th::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff0000, /* Red */
+    #ffff00, /* Yellow */
+    #00ff00, /* Green */
+    #00ffff, /* Cyan */
+    #0000ff, /* Blue */
+    #ff00ff, /* Magenta */
+    #ff0000 /* Red (to complete the loop) */
+  );
+  animation: rotateBorder 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1; /* Place behind card content */
+}
+
+th:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+th:hover::before {
+  opacity: 1;
+}
+td {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative; /* Needed for pseudo-elements */
+    overflow: hidden; /* Ensures glow stays within card boundaries */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  td::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      #ff0000, /* Red */
+      #ffff00, /* Yellow */
+      #00ff00, /* Green */
+      #00ffff, /* Cyan */
+      #0000ff, /* Blue */
+      #ff00ff, /* Magenta */
+      #ff0000 /* Red (to complete the loop) */
+    );
+    animation: rotateBorder 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1; /* Place behind card content */
+  }
+  
+  td:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  th:hover::before {
+    opacity: 1;
+  }
+  
+@keyframes rotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
